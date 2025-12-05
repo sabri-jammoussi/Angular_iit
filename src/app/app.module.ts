@@ -11,6 +11,7 @@ import { MemberComponent } from './member/member.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, MemberComponent, NavbarComponent],
@@ -22,6 +23,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
