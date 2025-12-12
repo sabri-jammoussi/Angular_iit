@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>{{ isEdit ? 'Edit Member' : 'New Member' }}</h2>
+
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field appearance="fill" style="width: 100%">
+        <mat-label>CIN</mat-label>
+        <input matInput formControlName="cin" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+        <mat-label>Type</mat-label>
+        <input matInput formControlName="type" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+        <mat-label>CV</mat-label>
+        <input matInput formControlName="cv" />
+    </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="onSave()">{{ isEdit ? 'Update' : 'Save' }}</button>
+</mat-dialog-actions>
